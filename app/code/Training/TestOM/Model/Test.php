@@ -17,7 +17,7 @@ class Test
         array $arrayList,
         \Training\TestOM\Model\ManagerInterfaceFactory $managerFactory
     ) {
-       $this->manager = $manager;
+        $this->manager = $manager;
         $this->name = $name;
         $this->number = $number;
         $this->arrayList = $arrayList;
@@ -33,9 +33,9 @@ class Test
         print_r($this->number);
         echo '<br>';
         print_r($this->arrayList);
-        echo '<br>';
+        echo '<br><hr>';
 
-        $newManager = $this->manager->create();
+        $newManager = $this->managerFactory->create();
         print_r(get_class($newManager));   
         
         // Generated class /generated/code/Training/TestOM/Model/ManagerInterfaceFactory.php 
