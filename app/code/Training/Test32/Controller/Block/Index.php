@@ -2,7 +2,7 @@
 
 namespace Training\Test32\Controller\Block;
 
-use Magento\Backend\App\Action\Context;
+use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\LayoutFactory;
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -13,7 +13,7 @@ class Index extends \Magento\Framework\App\Action\Action
     private $layoutFactory;
 
     /**
-     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Framework\View\LayoutFactory $layoutFactory
      */
     public function __construct(
@@ -27,7 +27,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $layout = $this->layoutFactory->create();
-        $block = $layout->createBlock('Training\Test32\Block\Test');
+        $block = $layout->createBlock(\Training\Test32\Block\Test::class);
         $this->getResponse()->appendBody($block->toHtml());
     }
 }
