@@ -10,10 +10,14 @@ class DescriptionReplacement
         $data = null
     ) {
 
-        $subject->setTemplate('Training_Task37::description.phtml');
-        
+        //$subject->setTemplate('Training_Task37::description.phtml');
+
         // Или такой вариант, если только для description 
-        //$subject->getLayout()->getBlock('product.info.description')->setTemplate('Training_Task37::description.phtml');
+        $subject->getLayout()->getBlock('product.info.description')->setTemplate('Training_Task37::description.phtml');
+
+        if ($subject->getNameInLayout() == 'product.info.sku') {
+            $subject->setTemplate('Training_Task37::description-sku.phtml');
+        }
 
         return $data;
     }
