@@ -331,6 +331,7 @@ return [
         'Training_PlayControllers' => 0,
         'Training_RedirectToMain' => 0,
         'Training_Render' => 1,
+        'Training_RenderRemove' => 1,
         'Training_Rendering' => 0,
         'Training_RenderingAdditional' => 0,
         'Training_RenderingCustom' => 0,
