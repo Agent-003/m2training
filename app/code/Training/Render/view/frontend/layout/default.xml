@@ -11,5 +11,12 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceContainer name="content">
+            <block name="training.render.test.form" template="Training_Render::test-form.phtml">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">Training\Render\ViewModel\Form</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
